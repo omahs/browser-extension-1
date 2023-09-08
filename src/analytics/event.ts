@@ -15,6 +15,55 @@ export const event = {
    */
   bridgeSubmitted: 'bridge.submitted',
   /**
+   * Called when the user clicks connect button in app connection nudge sheet.
+   */
+  dappAccountSwitchAlertConnectClicked:
+    'dapp.account_switch.alert.connect.clicked',
+  /**
+   * Called when the user clicks connect different account button in app connection nudge sheet.
+   */
+  dappAccountSwitchAlertConnectDifferentClicked:
+    'dapp.account_switch.alert.connect_different.clicked',
+  /**
+   * Called when the user clicks connect in app connection nudge banner.
+   */
+  dappAccountSwitchNudgeConnectClicked:
+    'dapp.account_switch.nudge.connect.clicked',
+  /**
+   * Called when the user sees app connection nudge banner
+   */
+  dappAccountSwitchNudgeConnectTriggered:
+    'dapp.account_switch.nudge.connect.triggered',
+  /**
+   * ??
+   */
+  dappAccountSwitchNudgeSwitchClicked:
+    'dapp.account_switch.nudge.switch.clicked',
+  /**
+   * ??
+   */
+  dappAccountSwitchNudgeSwitchTriggered:
+    'dapp.account_switch.nudge.switch.triggered',
+  /**
+   * Called when the user sees app connection nudge banner.
+   */
+  dappAccountSwitchNudgeViewed: 'dapp.account_switch.nudge.viewed',
+  /**
+   * Called when the user connects to different account in app wallet switcher.
+   */
+  dappAccountSwitchSwitcherWalletConnected:
+    'dapp.account_switch.switcher.wallet.connected',
+  /**
+   * Called when the user disconnects in app wallet switcher.
+   */
+  dappAccountSwitchSwitcherWalletDisconnected:
+    'dapp.account_switch.switcher.wallet.disconnected',
+  /**
+   * Called when the user changes network in app wallet switcher.
+   */
+  dappAccountSwitchSwitcherWalletNetworkSwitched:
+    'dapp.account_switch.switcher.wallet.network.switched',
+  /**
    * Called when the user approves a connection request from the active dApp.
    */
   dappPromptConnectApproved: 'dapp.prompt.connect.approved',
