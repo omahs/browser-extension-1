@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 import appConnectionSheetImageMask from 'static/assets/appConnectionSheetImageMask.svg';
+import { analytics } from '~/analytics';
+import { event } from '~/analytics/event';
 import { i18n } from '~/core/languages';
 import { useCurrentAddressStore } from '~/core/state';
 import { useAppConnectionWalletSwitcherStore } from '~/core/state/appConnectionWalletSwitcher/appConnectionSwitcher';
@@ -48,6 +50,7 @@ export const AppConnectionNudgeSheet = ({
   const [doNotShowAgain, setDoNotShowAgain] = useState(false);
 
   const connectToDifferentWallet = () => {
+    analytics.track(event.dappAccountSwitchAlertConnectDifferentClicked);
     triggerWalletSwitcher({ show: true });
     setShow(false);
   };

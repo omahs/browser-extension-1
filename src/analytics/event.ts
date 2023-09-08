@@ -272,6 +272,16 @@ export type EventProperties = {
      */
     flashbots: boolean;
   };
+  [event.dappAccountSwitchAlertConnectClicked]: undefined;
+  [event.dappAccountSwitchAlertConnectDifferentClicked]: undefined;
+  [event.dappAccountSwitchNudgeConnectClicked]: undefined;
+  [event.dappAccountSwitchNudgeConnectTriggered]: undefined;
+  [event.dappAccountSwitchNudgeSwitchClicked]: undefined;
+  [event.dappAccountSwitchNudgeSwitchTriggered]: undefined;
+  [event.dappAccountSwitchNudgeViewed]: undefined;
+  [event.dappAccountSwitchSwitcherWalletConnected]: undefined;
+  [event.dappAccountSwitchSwitcherWalletDisconnected]: undefined;
+  [event.dappAccountSwitchSwitcherWalletNetworkSwitched]: undefined;
   [event.dappPromptConnectApproved]: {
     /**
      * `chainId` of the default network the dApp requested.

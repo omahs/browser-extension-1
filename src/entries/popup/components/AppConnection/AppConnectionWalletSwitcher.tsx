@@ -2,6 +2,8 @@ import EventEmitter from 'events';
 
 import React, { useEffect, useMemo, useState } from 'react';
 
+import { analytics } from '~/analytics';
+import { event } from '~/analytics/event';
 import { i18n } from '~/core/languages';
 import { ChainId } from '~/core/types/chains';
 import { isLowerCaseMatch } from '~/core/utils/strings';
@@ -217,6 +219,9 @@ export const AppConnectionWalletSwitcher = () => {
                           <AppConnectionWalletItem
                             key={account.address}
                             onClick={() => {
+                              analytics.track(
+                                event.dappAccountSwitchSwitcherWalletConnected,
+                              );
                               addSession({
                                 host: appMetadata.appHost,
                                 address: account.address,

@@ -1,6 +1,8 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
+import { analytics } from '~/analytics';
+import { event } from '~/analytics/event';
 import { i18n } from '~/core/languages';
 import { shortcuts } from '~/core/references/shortcuts';
 import { useCurrentAddressStore } from '~/core/state';
@@ -73,6 +75,11 @@ export const AppConnectionWatcher = () => {
         if (showNudgeSheet) setShowNudgeSheet(false);
       } else if (e.key === shortcuts.global.SELECT.key) {
         connect();
+        analytics.track(
+          showNudgeBanner
+            ? event.dappAccountSwitchNudgeConnectClicked
+            : event.dappAccountSwitchAlertConnectClicked,
+        );
         triggerToast({
           title: i18n.t('app_connection_switcher.banner.app_connected', {
             appName: appName || appHostName,
